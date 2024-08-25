@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disaster Preparedness</title>
+    <style>
+
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+#education{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    width:80vw;
+    position: relative;
+    left: 18vw;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 10px;
+    font-size: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #835757;
+}
+
+section {
+    padding: 0px;
+    margin: 0px;
+}
+
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+.disasters{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    max-width: 80vw;
+    flex-wrap: wrap;
+    /* border: 2px solid black; */
+}
+
+.card:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.disastername{
+    text-align: center;
+}
+.disasterImg{
+    border: 2px solid black;
+    width: 13vw;
+    height: 300px;
+    border-radius: 10px;
+    background-color: gray;
+}
+.card{
+    list-style-type: none; 
+}
+
+.flex{
+    justify-content: center;
+    align-items: center;
+}
+
+.ReportDisaster{
+    border: 2px solid black;
+    width: 17vw;
+    height: 83.5vh;
+    border-radius: 10px;
+    position: absolute;
+    overflow: auto;
+    background-color: gray;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <h1>Disaster Preparedness</h1> -->
+        <nav>
+            <ul class="">
+                <li class="card"><a href="reportdisaster.html" target="_blank">Report Disaster</a></li>
+                <li class="card"><a href="#education">Education</a></li>
+                <li class="card"><a href="#resources">Resources</a></li>
+                <li class="card"><a href="#community">Community</a></li>
+                <li class="card"><div id="google_translate_element"></div></li>
+            </ul>
+            
+        </nav>
+    </header>   
+
+    <section id="alerts">
+        <h2>Real-Time Alerts</h2>
+        <button class="fetchWeather">
+            fetch weather
+        </button>
+        <h5 id="error"></h5>
+        <h3 id="city"></h3>
+        <div id="weather"></div>
+    </section>
+    <section class="ReportDisaster">
+        <div>
+            <h1>Reported Disasters</h1>
+            <ul id="reportList">
+            </ul>
+        </div> 
+    </section>
+    <section id="education">
+        <h2>Disaster Preparedness Education</h2>
+        <p>Learn how to prepare for various disasters.</p>
+        <ul class="disasters">
+            <li class="card">
+                <a href="earthquake.html" target="_blank">
+                    <img src="https://images.pexels.com/photos/7806175/pexels-photo-7806175.jpeg?cs=srgb&dl=pexels-sanej-prasad-suwal-32250314-7806175.jpg&fm=jpg" class="disasterImg">
+                </a>
+                <div class="disastername">Earthquake</div>
+            </li>
+            <li class="card">
+                <a href="fire.html">
+                    <img src="https://static.vecteezy.com/system/resources/previews/037/996/713/non_2x/ai-generated-fiery-disaster-intense-flames-in-industrial-setting-photo.jpg" class="disasterImg"">
+                </a>
+                <div class="disastername">Fire</div>
+            </li>
+            <li class="card">
+                <a href="hurricane.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Katrina_2005-08-28_1700Z.jpg/1200px-Katrina_2005-08-28_1700Z.jpg" class="disasterImg">
+                </a>
+                <div class="disastername">Hurricane</div>
+            </li>
+            <li class="card">
+                <a href="flood.html">
+                    <img src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsb2ZmaWNlN19waG90b19tYXNzaXZlX2Zsb29kaW5nX3ZpbGxhZ2VfYW5kX3Blb3BsZV9zdXJ2aV84N2NjZDU4NS0wNzY2LTRmZGQtOGNjOS03MTRlNThmMWFiYWZfMS5qcGc.jpg" class="disasterImg">
+                </a>
+                <div class="disastername">Flood</div>
+            </li>
+            <li class="card">
+                <a href="heat.html" target="_blank">
+                    <img src="https://media.istockphoto.com/id/481433242/vector/hot-day-in-the-city-with-thermometer-vector-summer-concept.jpg?s=612x612&w=0&k=20&c=PbgcO0qrGqzFn8IPB2LygWQwPLI9JkOsB-lcRTH0gf4=" class="disasterImg">
+                </a>
+                <div class="disastername">Heat Wave</div>
+            </li>
+            <li class="card">
+                <a href="tsunami.html" target="_blank">
+                    <img src="https://cdn.pixabay.com/photo/2024/01/10/02/49/ai-generated-8498744_640.jpg" class="disasterImg">
+                </a>
+                <div class="disastername">Tsunami</div>
+            </li>
+        </ul>
+        </section>
+
+    <section id="resources">
+        <h2>Resources</h2>
+        <ul>
+            <li>Emergency contact information</li>
+            <li>Checklists</li>
+            <li>Useful links</li>
+        </ul>
+    </section>
+
+    <section id="community">
+        <h2>Community Forum</h2>
+        </section>
+
+    <footer>
+        <p>&copy; Disaster Preparedness App</p>
+    </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        } 
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <!-- weather integration -->
+    <script src="weather.js"></script>;
+    <!-- <script src="dummy.js"></script>; -->
+    <script src="fetchformdta.js"></script>
+</body>
+</html>
