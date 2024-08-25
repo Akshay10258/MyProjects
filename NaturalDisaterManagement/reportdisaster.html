@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Disaster Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            color: #518b53;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="text"], 
+        input[type="date"], 
+        input[type="time"], 
+        textarea, 
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            form {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            label {
+                font-size: 14px;
+            }
+
+            input[type="text"], 
+            input[type="date"], 
+            input[type="time"], 
+            textarea, 
+            select {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            button {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Report a Natural Disaster</h1>
+    <form id="disasterForm">
+
+        <label for="Name">Name :</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="disasterType">Disaster Type:</label>
+        <select id="disasterType" name="disasterType" required>
+            <option value="" disabled selected>Select a disaster type</option>
+            <option value="Earthquake">Earthquake</option>
+            <option value="Flood">Flood</option>
+            <option value="Hurricane">Hurricane</option>
+            <option value="Tornado">Tornado</option>
+            <option value="Wildfire">Wildfire</option>
+            <option value="Landslide">Landslide</option>
+            <option value="Volcanic Eruption">Volcanic Eruption</option>
+        </select><br><br>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+        <br><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+
+        <button type="button" onclick="submitForm()">Submit Report</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            const disasterType = document.getElementById('disasterType').value;
+            const location = document.getElementById('location').value;
+            const date = document.getElementById('date').value;
+            const description = document.getElementById('description').value;
+
+            const report = {disasterType,location,date,description};
+
+            let reports = JSON.parse(localStorage.getItem('reports')) || [];
+            reports.push(report);
+            localStorage.setItem('reports', JSON.stringify(reports));
+
+            alert('Report submitted successfully!');
+
+            // Resetting the form after submission
+            document.getElementById('disasterForm').reset();
+        }
+    </script>
+</body>
+</html>
