@@ -8,6 +8,6 @@
 
 - The website is made "responsive" for all screen sizes which is a added feature that the original spotify website lacks
 
-- Its not a fully fledged project yet and just developed to test the frontend-development skills
+- Its not a fully fledged project yet and just developed to test the frontend-development skills.
 
-- The website is hosted in this Link : http://akwebprojects.freewebhostmost.com/
+- The website is hosted in this Link : http://akwebprojects.freewebhostmost.com/ (it has some sample song folders)
