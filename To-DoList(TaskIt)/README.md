@@ -1,8 +1,10 @@
-# React + Vite
+# Task It 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Project done using React.js through vite build tool.
 
-Currently, two official plugins are available:
+-  A standard to-do list website where you can create,delete,edit and even check todos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- The todos get stored in the localstorage so that the todos are not lost when the website is refreshed 
+
+- Tailwind css has been used to design the ui
+
