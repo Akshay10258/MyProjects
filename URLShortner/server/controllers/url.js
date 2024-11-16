@@ -1,5 +1,6 @@
 const {nanoid} = require("nanoid");
 const URL = require('../models/url')
+
 async function handleGenerateNewShortURL(req , res){
     const shortID = nanoid(8);
     const body = req.body;
@@ -16,16 +17,16 @@ async function handleGenerateNewShortURL(req , res){
     return res.json({id : shortID})
 }
 
-// async function handleGetAnalytics(req , res){
-//     const shortId = req.params.shortId;
-//     const result = await URL.findOne({ shortId : shortId })
-//     return res.json({ 
-//         totalClicks: result.visitHistory.length,
-//         analytics: result.visitHistory,
-//     })
-// }
+async function handleGetAnalytics(req , res){
+    const shortId = req.params.shortId;
+    const result = await URL.findOne({ shortId : shortId })
+    return res.json({ 
+        totalClicks: result.visitHistory.length,
+        // analytics: result.visitHistory,
+    })
+}
 
 module.exports = {
     handleGenerateNewShortURL,
-    // handleGetAnalytics
+    handleGetAnalytics
 }
