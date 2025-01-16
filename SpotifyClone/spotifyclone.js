@@ -117,7 +117,9 @@ async function getalbumNames(){
             parseUrl=new URL(element.href);
             path=parseUrl.pathname;
             finalname=path.split('/')[1];
-            albumFiles.push(finalname);
+            if(!albumFiles.includes(finalname)){
+                albumFiles.push(finalname);
+            }
             let divalbum=document.createElement("div");
             divalbum.setAttribute("class","card");
             document.querySelector(".albumCards").append(divalbum);
