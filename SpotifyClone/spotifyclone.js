@@ -28,12 +28,12 @@ async function getaudioFiles(folder){
     console.log("req folder",folder)
     let a=await fetch(`https://s3.ap-south-1.amazonaws.com/spoifyclone.audiofiles/songlist/index.html`);
     let ahtml = await a.text();
-    // console.log(ahtml);
+    console.log(ahtml);
     
     let div=document.createElement("div")
     div.innerHTML=ahtml;
     let audioNames=div.getElementsByTagName("a")
-    // console.log(audioNames);
+    console.log("filefile....",audioNames);
     
     let audioFiles=[];
     for (let i = 1; i < audioNames.length; i++) {
