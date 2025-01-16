@@ -39,7 +39,7 @@ async function getaudioFiles(folder){
     for (let i = 1; i < audioNames.length; i++) {
         const element = audioNames[i];
         // console.log("ele",element)
-        if(element.href.startsWith(folder){
+        if(element.href.startsWith(folder)){
             if(element.href.endsWith(".mp3") || element.href.endsWith(".wav")){
                 audioFiles.push(element.href)
             }
