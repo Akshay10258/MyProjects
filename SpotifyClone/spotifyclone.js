@@ -114,7 +114,9 @@ async function getalbumNames(){
     for (let i = 1; i < albumNames.length; i++) {
         const element = albumNames[i];
         console.log(element);
-            finalname=element.href;
+            parseUrl=new URL(element.href);
+            path=parseUrl.pathname;
+            finalname=path.split('/')[1];
             albumFiles.push(finalname);
             let divalbum=document.createElement("div");
             divalbum.setAttribute("class","card");
