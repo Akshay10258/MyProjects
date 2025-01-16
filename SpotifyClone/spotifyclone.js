@@ -26,7 +26,7 @@ let currentAudio=new Audio()
 
 async function getaudioFiles(folder){
     console.log("req folder",folder)
-    let a=await fetch(`http://127.0.0.1:3000/songlist/${folder}`);
+    let a=await fetch(`./songlist/${folder}`);
     let ahtml = await a.text();
     // console.log(ahtml);
     
@@ -100,7 +100,7 @@ async function getaudioFiles(folder){
 }
 
 async function getalbumNames(){
-    let a=await fetch("http://127.0.0.1:3000/songlist/");
+    let a=await fetch("./songlist/");
     let ahtml = await a.text();
     
     let div=document.createElement("div")
