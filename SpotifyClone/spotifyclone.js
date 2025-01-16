@@ -26,7 +26,7 @@ let currentAudio=new Audio()
 
 async function getaudioFiles(folder){
     console.log("req folder",folder)
-    let a=await fetch(`./songlist/${folder}`);
+    let a=await fetch(`https://s3.ap-south-1.amazonaws.com/spoifyclone.audiofiles/songlist/${folder}`);
     let ahtml = await a.text();
     // console.log(ahtml);
     
@@ -100,7 +100,7 @@ async function getaudioFiles(folder){
 }
 
 async function getalbumNames(){
-    let a=await fetch("./songlist/");
+    let a=await fetch("https://s3.ap-south-1.amazonaws.com/spoifyclone.audiofiles/songlist/");
     let ahtml = await a.text();
     
     let div=document.createElement("div")
