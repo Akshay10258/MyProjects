@@ -119,18 +119,18 @@ async function getalbumNames(){
             finalname=path.split('/')[1];
             if(!albumFiles.includes(finalname)){
                 albumFiles.push(finalname);
+                let divalbum=document.createElement("div");
+                divalbum.setAttribute("class","card");
+                document.querySelector(".albumCards").append(divalbum);
+    
+                divalbum.innerHTML=`<div class="albumPic">
+                                    <button class="play tran">
+                                        <img src="playbutton.svg" class="playicon">
+                                    </button>
+                                </div>
+                                <div class="albumname">${finalname}</div>
+                                <div class="albumdetails">asdd</div>`;
             }
-            let divalbum=document.createElement("div");
-            divalbum.setAttribute("class","card");
-            document.querySelector(".albumCards").append(divalbum);
-
-            divalbum.innerHTML=`<div class="albumPic">
-                                <button class="play tran">
-                                    <img src="playbutton.svg" class="playicon">
-                                </button>
-                            </div>
-                            <div class="albumname">${finalname}</div>
-                            <div class="albumdetails">asdd</div>`;
     }
     console.log(albumFiles)
 
