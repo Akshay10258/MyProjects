@@ -41,7 +41,9 @@ async function getaudioFiles(folder){
         // console.log("ele",element)
         if(element.href.includes(folder)){
         if(element.href.endsWith(".mp3") || element.href.endsWith(".wav")){
-            audioFiles.push(element.href)
+            parseUrl=new URL(element.href);
+            path=parseUrl.pathname;
+            audioFiles.push(`https://s3.ap-south-1.amazonaws.com/spoifyclone.audiofiles/songlist${path}`)
         }
         }
     }
