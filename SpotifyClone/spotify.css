@@ -607,9 +607,9 @@ section > .popularArtists, .popularAlbumbs {
     left: 55px;
 }
 
-.details div{
+/* .details div{
     word-break: break-all;
-}
+} */
 .scaleffectForplaylist:hover{
     transform: scale(1.1);
     cursor:pointer;
