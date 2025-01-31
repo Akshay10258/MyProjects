@@ -582,7 +582,7 @@ section > .popularArtists, .popularAlbumbs {
     justify-content:space-between;
     align-items: center;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 10px;
     position: relative;
 
 }
@@ -601,8 +601,8 @@ section > .popularArtists, .popularAlbumbs {
     width: 40px;
 }
 .details{
-    font-size: 13px;
-    width: 64px;
+    font-size: 10px;
+    width: 70px;
     position: relative;
     left: 55px;
 }
