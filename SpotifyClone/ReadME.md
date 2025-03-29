@@ -10,4 +10,6 @@
 
 - Its not a fully fledged project yet and just developed to test the frontend-development skills.
 
-- The website is hosted in this Link : https://my-projects-omega-three.vercel.app/ (it has some sample song folders)
+-It has some sample song folders loded from AWS S3 bucket.
+
+- The website is hosted in this Link : https://my-projects-omega-three.vercel.app/ 
